@@ -36,18 +36,17 @@ i = 0   #счетчик для вычислений
 #     i += 1
 
 
-i += 1
+
 t.append(t[0] + i * tau)
 v.append(x[i] / t[i])
-
-
-
-
 x.append(x[i-1] + v[i-1] + a [i-1] * tau**2 / 2)
+
+
 v.append(v[i-1] + a[i-1] * tau)
 a.append((m*g - k2 * v[i]**2) / m)
-print(x[i])
-print(i)
+
+
+i += 1
         
 
 
