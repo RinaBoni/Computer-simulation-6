@@ -4,6 +4,7 @@
 # (на большей части пути). 
 
 import math as m
+import matplotlib.pyplot as plt
 
 m = float (input("Введите массу тела: "))
 h = float (input("Введите высоту, с которой падает тело: "))
@@ -21,6 +22,7 @@ a=[]    #ускорение
 t=[]    #время
 v=[]    #скорость
 
+#начальные значения 
 x.append(0)
 t.append(0)
 v.append(0)
@@ -28,41 +30,21 @@ a.append(g)
 
 i = 0   #счетчик для вычислений
 
-# while x[i] != h:
-#     t[i] = t[0] + i * tau
-#     x[i] = x[i-1] + v[i-1] + a [i-1] * tau**2 / 2
-#     v[i] = v[i-1] + a[i-1] * tau
-#     a[i] = (m*g - k2 * v[i]) / 2
-#     i += 1
+while(x[i]<h):
+    i += 1 
+    
+    t.append(t[0] + i * tau)
 
+    x.append(x[i-1] + v[i-1] + a [i-1] * tau**2 / 2)
+    
+    v.append((m*g - k2 * v[i-1]**2) / m)
 
+    a.append((m*g - k2 * v[i]**2) / 2)
 
-t.append(t[0] + i * tau)
-v.append(x[i] / t[i])
-x.append(x[i-1] + v[i-1] + a [i-1] * tau**2 / 2)
-
-
-v.append(v[i-1] + a[i-1] * tau)
-a.append((m*g - k2 * v[i]**2) / m)
-
-
-i += 1
+#график
+plt.title('')
+plt.xlabel('скорость')
+plt.ylabel('время')
+plt.plot(v, t)
+plt.show()
         
-
-
-
-
-#import math as m
-
-#c = float (input("Введите коэффициент лобового сопротивления тела: "))
-#S = float (input("Введите площадь поперечного сечения тела: "))
-#m = float (input("Введите массу тела: "))
-#h = float (input("Введите высоту, с которой падает тело: "))
-#ro = float (input("Введите плотность среды, в которую падает тело: "))
-#tau = float (input("Введите шаг во времени: "))
-
-#k2 = 0.5 * c * S *ro #коэффициент лобового сопротивления тела
-#g = 9.8 #ускорение свободного падения
-#i = 0 #счетчик для вычислений
-
-#while()
