@@ -93,3 +93,5 @@
 
 [лекция и задание](https://vk.com/ivt2020zabgu?w=wall-198363309_357)
 
+[сделать хеапмап](https://www.youtube.com/watch?v=7ovnav292dY)
+
