@@ -58,13 +58,6 @@ def setTochered(data):
 def setTsystem(data):
     data["tsystem"] = data["nsystem"] / (data["lambda"] * data["psystem"])
 
-# def setTochered(data):
-#     if (data["lambda"] * data["psystem"]>0):
-#         data["tochered"] = data["nochered"] / (data["lambda"] * data["psystem"])
-#
-# def setTsystem(data):
-#     if(data["lambda"] * data["psystem"]>0):
-#         data["tsystem"] = data["nsystem"] / (data["lambda"] * data["psystem"])
 
 def setAllParams(data):
  setRo(data)
@@ -96,18 +89,6 @@ def printAllParams(data):
    printParam("Среднее время пребывания заявки в системе", data["tsystem"])
 
 
-# def printAllParams(data):
-#  printParam("Коэффициент использования объекта ", data["ro"]/N)
-#  printParam("Вероятность того, что линия свободна ", data["p0"]/N)
-#  printParam("Вероятность отказа в обслуживании ", data["potkaz"]/N)
-#  printParam("Вероятность принятия заявки в систему ", data["q"]/N)
-#  printParam("Относительная пропускная способность ", data["psystem"]/N)
-#  printParam("Абсолютная пропусная способность ", data["A"]/N)
-#  printParam("Среднее число заявок в очереди ", data["nochered"]/N)
-#  printParam("Среднее число заявок в обслуживании ", data["nobsl"]/N)
-#  printParam("Среднее число заявок в СМО ", data["nsystem"]/N)
-#  printParam("Среднее время ожидания заявки в очереди ", data["tochered"]/N)
-#  printParam("Среднее время пребывания заявки в системе", data["tsystem"]/N)
 
 # Исполнение
 
